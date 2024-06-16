@@ -1,0 +1,16 @@
+# 忽略macOS系统文件
+.DS_Store
+
+# 忽略Visual Studio for Mac生成的文件
+.vs/
+*.user
+*.suo
+
+# 忽略编译输出文件
+bin/
+obj/
+Properties/
+
+# 忽略特定文件
+mySecretFile.txt
+appsettings.json

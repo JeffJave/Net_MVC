@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Info Page";
+    var account  = Model.AccountID;
+    var password = Model.Password;
+    var email    = Model.EMail;
+    var country  = Model.Country;
+    var address  = Model.Address;
+}
+
+@*<DIV style="DISPLAY: inline; FONT-WEIGHT: bold; WIDTH: 496px; HEIGHT: 20px" ms_positioning="FlowLayout" id="account" runat="server">SOMETHING</DIV>*@
+<div class="text-left">
+    <h4>Enter Information</h4>
+    <h6>You enter account  is "@account".</h6>
+    <h6>You enter password is "@password".</h6>
+    <h6>You enter email    is "@email".</h6>
+    <h6>You enter country  is "@country".</h6>
+    <h6>You enter address  is "@address".</h6>
+</div>
