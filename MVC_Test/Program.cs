@@ -8,6 +8,11 @@ public class Program
 
         // Add services to the container.
         builder.Services.AddControllersWithViews();
+        builder.Services.AddSession(options =>
+        {
+            // Set session timeout after 1 minute.
+            options.IdleTimeout = TimeSpan.FromMinutes(1);
+        });
 
         var app = builder.Build();
 
@@ -18,6 +23,8 @@ public class Program
             // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
             app.UseHsts();
         }
+
+        app.UseSession();
 
         app.UseHttpsRedirection();
         app.UseStaticFiles();
