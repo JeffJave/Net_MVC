@@ -20,12 +20,18 @@
         <label for="inputEmail" class="form-label">Email</label>
         <input type="email" class="form-control" name="inputEmail">
     </div>
+    <div class="col-md-6">
+        <label for="inputPhoneNbr" class="form-label">Phone Number</label>
+        <input type="tel" class="form-control" name="inputPhoneNbr">
+    </div>
     <div class="col-md-4">
-        <label for="inputCountry" class="form-label">Country</label>
-        <select id="inputCountry" class="form-select" name="inputCountry">
+        <label for="inputBirthDay" class="form-label">Birthday</label>
+        <input type="date" class="form-control" name="inputBirthDay">
+        <label for="inputGender" class="form-label">Gender</label>
+        <select class="form-select" name="inputGender">
             <option selected>Choose...</option>
-            <option>Taiwan</option>
-            <option>United States</option>
+            <option>Male</option>
+            <option>Female</option>
         </select>
     </div>
     <div class="col-12">
@@ -34,10 +40,8 @@
     </div>
     <div class="col-12">
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-                Agree to privacy
-            </label>
+            <input class="form-check-input" type="checkbox" id="gridCheck" name="deleteRec">
+            <label class="form-check-label" for="gridCheck">Delete Record</label>
         </div>
     </div>
     <div class="col-12">
@@ -45,40 +49,25 @@
     </div>
 </form>
 
-<!--<form action="@Url.Content("~/ERP/Form")" method="post" class="form-input" target="_blank">
-    <div class="Data-Content">
-        <div class="Form-label">
-            <div class="AlignRight">
-                <label for="account">Account :</label>
-                <label for="password">Password :</label>
-                <label for="email">Email : </label>-->
-                @*<label for="browser">Pref. Browser :</label>*@
-            <!--</div>
-        </div>
-        <div class="form-input">
-            <input type="text" name="account" required />
-            <input type="password" name="password" required />
-            <input type="email" name="email" required />-->
-        @*</div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-            <label class="form-check-label" for="inlineCheckbox1">
-                Safari
-                <img src="https://cdn.icon-icons.com/icons2/2552/PNG/512/safari_browser_logo_icon_152965.png" width="50" height="50" />
-            </label>
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-            <label class="form-check-label" for="inlineCheckbox2">
-                Chrome
-                <img src="https://cdn.icon-icons.com/icons2/836/PNG/512/Google_Chrome_icon-icons.com_66794.png" width="50" height="50" />
-            </label>
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" >
-            <label class="form-check-label" for="inlineCheckbox3">
-                Edge
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-MIe7i40AryOBdFYgTUduOq7JHS5Ce_OmWw&s" width="50" height="50" />
-            </label>
-        </div>
-        <div class="form-button">*@
-            <!--<button type="submit" class="button">Submit</button>
-        </div>
-    </div>
-</form>-->
+
+@*<div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+    <label class="form-check-label" for="inlineCheckbox1">
+        Safari
+        <img src="https://cdn.icon-icons.com/icons2/2552/PNG/512/safari_browser_logo_icon_152965.png" width="50" height="50" />
+    </label>
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+    <label class="form-check-label" for="inlineCheckbox2">
+        Chrome
+        <img src="https://cdn.icon-icons.com/icons2/836/PNG/512/Google_Chrome_icon-icons.com_66794.png" width="50" height="50" />
+    </label>
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" >
+    <label class="form-check-label" for="inlineCheckbox3">
+        Edge
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-MIe7i40AryOBdFYgTUduOq7JHS5Ce_OmWw&s" width="50" height="50" />
+    </label>
+</div>
+<div class="form-button">
+    <button type="submit" class="button">Submit</button>
+</div>
+</div>*@
