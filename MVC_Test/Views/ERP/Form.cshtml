@@ -1,21 +1,50 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-    ViewData["Title"] = "Info Page";
-    var account  = Model.AccountID;
-    var password = Model.Password;
-    var email    = Model.EMail;
-    var country  = Model.Country;
-    var address  = Model.Address;
+﻿@{
+    ViewData["Title"] = "Login Page";
 }
 
-@*<DIV style="DISPLAY: inline; FONT-WEIGHT: bold; WIDTH: 496px; HEIGHT: 20px" ms_positioning="FlowLayout" id="account" runat="server">SOMETHING</DIV>*@
-<div class="text-left">
-    <h4>Enter Information</h4>
-    <h6>You enter account  is "@account".</h6>
-    <h6>You enter password is "@password".</h6>
-    <h6>You enter email    is "@email".</h6>
-    <h6>You enter country  is "@country".</h6>
-    <h6>You enter address  is "@address".</h6>
-</div>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+    <div class="text-left">
+        <h4>Enter Information</h4>
+        <h6>@Model.AccountID, your login times : <span class="digit_no gradient">@ViewData["TensDig"]</span><span class="digit_no gradient">@ViewData["Digits"]</span>, You enter password is "@Model.Password".</h6>
+        <br />
+    </div>
+
+    <table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Phone Number</th>
+                <th>Customer Number</th>
+                <th>Customer Name</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Total Bonus</th>
+                <th>Total Amount</th>
+                <th>Created Date Time</th>
+                <th>Last Modified Date Time</th>
+            </tr>
+        </thead>
+    </table>
+    <script>
+        $('#example').DataTable({
+            "ajax": '/ERP/CustomerInfo',
+            columns: [
+                { data: 'phoneNumber' },
+                { data: 'customerNumber' },
+                { data: 'customerName' },
+                { data: 'address' },        
+                { data: 'email' },
+                { data: 'totalBonus' },
+                { data: 'totalAmount' },
+                { data: 'createDateTime' },
+                { data: 'lastUpdateDateTime' }
+            ]
+        });
+    </script>
+</body>
+</html>
